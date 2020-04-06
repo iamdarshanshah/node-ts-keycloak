@@ -1,0 +1,26 @@
+{
+  "name": "keycloaktest",
+  "version": "1.0.0",
+  "description": "Test of KeyCloak implementation with node",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "coverage": "nyc -r lcov -e .ts -x \"*.spec.ts\" npm run test",
+    "build": "tsc",
+    "lint": "./node_modules/.bin/eslint src/**/*",
+    "start": "node src/server.js"
+  },
+  "author": "Darshan Shah",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.9.5",
+    "@types/express": "^4.17.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.0",
+    "express-session": "^1.17.0",
+    "keycloak-connect": "^9.0.2",
+    "typescript": "^3.8.3"
+  }
+}
